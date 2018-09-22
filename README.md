@@ -4,6 +4,8 @@ These codes use as input the files from VASP = Vienna Ab initio Simulation Packa
 
 To compile these codes on a unix machine use the Fortran compiler available eg ifort.
 
+chg_ave.f : input CHGCAR / LOCPOT formatted file, outputs : Planar averaged charge for plotting
+
 mk_neb.f : input two POSCAR files, output : 16 POSCAR files for a NEB VASP simulation
 
 CONTCAR is the input file for VASP which includes lattice vectors and basis atom vectors
