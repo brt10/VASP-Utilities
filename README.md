@@ -4,7 +4,7 @@ These codes use as input the files from VASP = Vienna Ab initio Simulation Packa
 
 To compile these codes on a unix machine use the Fortran compiler available eg ifort.
 
-Sample VASP files: CONTCAR and PARCHG
+Sample VASP files: CONTCAR
 
 chg_ave.f : input CHGCAR / LOCPOT formatted file, outputs : Planar averaged charge for plotting
 
