@@ -6,7 +6,7 @@ To compile these codes on a unix machine use the Fortran compiler available eg i
 
 Sample VASP files: CONTCAR
 
-chg_ave.f : input CHGCAR / LOCPOT formatted file, outputs : Planar averaged charge for plotting
+chg_ave.f : input CHGCAR / LOCPOT formatted file, outputs : Planar averaged charge for plotting : center of charge ave calculated
 
 mk_neb.f : input two POSCAR files, output : 16 POSCAR files for a NEB VASP simulation
 
