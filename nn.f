@@ -1,4 +1,4 @@
-    program anlyze
+       program anlyze
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 C program analyzes nearest neighbor distances from a POSCAR VASP file
 C  written by  Blair Tuttle 
@@ -13,7 +13,11 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
       real dist(3,3)
       integer nn,ii,i,j,k,i1,i2,i3, lbeta 
 	integer ntot,ntp,na(2),ntype(1000)
- 
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+        write(*,*) 'Must have CONTCAR file'
+        write(*,*) '                    '
+        write(*,*) 'How many species in your CONTCAR file?'
+        read(*,*)        ntp
 ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
       open(unit=1, file='CONTCAR')
       read(1,*) test 
@@ -22,8 +26,6 @@ ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
       read(1,*) a2vec(1),a2vec(2),a2vec(3)
       read(1,*) a3vec(1),a3vec(2),a3vec(3)
       read(1,*) test
-	write(*,*) 'How many species in your CONTCAR file?'
-	read(*,*) 	 ntp   
       read(1,*) (na(i),i=1,ntp)     
 C  only needed if selective dynamics chosen      read(1,*) test
       read(1,*) test
@@ -52,7 +54,7 @@ ccccccccccccccccccccccccccccccccccccccccccccccccccccc
           a3vec(i) = a3vec(i)*a_latt
         enddo 
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-	write(*,*) 'choose three nearest neighbor distances in Angstroms:   '
+	write(*,*) 'choose three nearest neighbor distances in Angstroms:'
 	do i = 1, ntp
 		do j=i,ntp	
 	write(*,*) 'The distance between atom ',i,' and atom ',j,' is : '
