@@ -13,3 +13,5 @@ mk_neb.f : input two POSCAR files, output : 16 POSCAR files for a NEB VASP simul
 mk_super.f : input is a CONTCAR unit cell file, output is a POSCAR file which is a supercell of the unit cell
 
 nn.f : input is a CONTCAR file, outputs nearest neighbor lists with distances
+
+parchg_max.f : input is a PARCHG file, output is a CHG_MAX file which include atom closest to the maximum charge density, ie the DB atom.
